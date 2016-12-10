@@ -1,0 +1,39 @@
+.imdb > * {
+    display: inline-block !important;
+}
+
+.imdb img {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-bottom;
+    height: 15px;
+}
+
+.bob-card .bob-info .meta a {
+    margin-bottom: 3px;
+}
+
+@keyframes loading {
+  from {
+	-webkit-filter: grayscale(100%);
+  }
+
+  to {
+	-webkit-filter: grayscale(50%);
+  }
+}
+
+.bob-card.imdb_pending .meta:after, .jawBone.imdb_pending .meta:after {
+    content: '';
+    width: 30px;
+    height: 15px;
+    background: url('chrome-extension://__MSG_@@extension_id__/imdb.svg') no-repeat;
+	animation-duration: .8s;
+ 	animation-name: loading;
+	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+  	position: relative;
+    top: 3px;
+    left: 0px;
+}
+
